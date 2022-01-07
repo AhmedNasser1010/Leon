@@ -2,6 +2,8 @@
 :root {
     --main-color: #10cab7;
     --black: #333;
+    --p-color: #777;
+    --side-color: #2c4755;
 }
 /* end variable */
 /* Start Frame Work */
@@ -82,7 +84,7 @@ header nav {
     position: absolute;
     top: calc(100% + 9px);
     right: 0%;
-    background-color: #eee;
+    background-color: #f6f6f6;
     display: none;
 }
 header nav::before {
@@ -128,7 +130,7 @@ ul li:not(:last-child) {
 .section-1 {
     width: 100%;
     height: calc(100vh - 63px);
-    background-image: url(../image/main.jpg);
+    background-image: url(../image/landing.jpg);
     background-position: center;
     background-size: cover;
 }
@@ -162,13 +164,19 @@ ul li:not(:last-child) {
 /* Start Features */
 .section-2 {
     padding: 60px 10px;
-    background-color: #eee;
+    background-color: #f6f6f6;
 }
 
 .section-2 .box {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     grid-gap: 20px;
+}
+
+@media (min-width: 1199px) {
+    .section-2 .box {
+        grid-template-columns: repeat(3, minmax(300px, 1fr));
+    }
 }
 
 .section-2 .box
@@ -185,7 +193,7 @@ ul li:not(:last-child) {
 
 .section-2 .box
 .feat p {
-    color: #777;
+    color: var(--p-color);
 }
 /* End Features */
 /* Start Services */
@@ -195,15 +203,68 @@ ul li:not(:last-child) {
 
 .section-3 .services {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
     grid-gap: 30px;
-    margin: 60px 10px;
+    margin: 60px 30px;
+}
+
+.section-3 .services
+.col .img {
+    display: none;
+}
+
+.section-3 .services
+.col .img img {
+    width: 250px;
+}
+
+.section-3 .services
+.col {
+    position: relative;
+}
+
+.section-3 .services
+.col .img:before {
+    content: "";
+    width: 100px;
+    height: calc(100% + 100px);
+    background-color: var(--side-color);
+    position: absolute;
+    bottom: -15%;
+    left: 185px;
+    z-index: -1;
+}
+
+@media (min-width: 1199px) {
+    .section-3 .services {
+        grid-template-columns: repeat(3, minmax(300px, 1fr));
+    }
+    .section-3 .services
+    .col .img {
+        display: block;
+    }
+}
+
+@media (max-width: 767px) {
+    .section-3 .services
+    .col .srv {
+        display: block !important;
+        text-align: center;
+    }
+    .section-3 .services
+    .col .srv .logo {
+        margin-bottom: 20px;
+    }
+    .section-3 .services
+    .col .srv .logo i {
+        font-size: 50px;
+    }
 }
 
 .section-3 .services
 .col .srv {
     display: flex;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
 }
 
 .section-3 .services
@@ -214,17 +275,28 @@ ul li:not(:last-child) {
 .section-3 .services
 .col .srv .text .prg {
     margin: 0px;
+    color: var(--p-color);
+    line-height: 1.8;
 }
 
 .section-3 .services
 .col .srv .logo i {
     color: var(--main-color);
-    font-size: 30px;
+    font-size: 35px;
     flex-basis: 10px;
 }
 
 .section-3 .services
 .col .srv .logo {
-    flex-basis: 180px;
+    flex-basis: 140px;
+}
+
+.section-3 .box-title {
+    margin-top: 70px;
+    margin-bottom: 90px;
+}
+
+.section-3 .services .col {
+    margin: 0px auto;
 }
 /* End Services */
