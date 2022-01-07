@@ -1,0 +1,230 @@
+/* start variable  */
+:root {
+    --main-color: #10cab7;
+    --black: #333;
+}
+/* end variable */
+/* Start Frame Work */
+.style-title-1 {
+    color: #ebeced;
+    font-size: 100px;
+    font-weight: 800;
+    text-align: center;
+    margin: 0px;
+}
+.style-title-1 + p {
+    color: #797985;
+    text-align: center;
+    margin-top: -28px;
+    font-size: 18px;
+}
+@media (max-width: 767px) {
+    .style-title-1 {
+        font-size: 60px;
+    }
+    .style-title-1 + p {
+        font-size: 12px;
+        margin-top: -18px;
+    }
+}
+/* End Frame Work */
+/* start global rules */
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Work Sans', sans-serif;
+}
+/* end global rules */
+/* Start Header */
+header {
+    width: 100%;
+    height: 63px;
+    display: flex;
+    padding: 20px 30px;
+    justify-content: space-between;
+}
+header .berger-logo {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    position: relative;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+header
+.berger-logo span {
+    width: 100%;
+    height: 2px;
+    background-color: var(--black);
+    display: block;
+    margin-bottom: 5px;
+    transition: 0.3s;
+}
+header
+.berger-logo
+span:nth-child(2) {
+    width: 50%;
+}
+header
+.berger-logo:hover
+span:nth-child(2) {
+    width: 100%;
+}
+
+header nav {
+    width: 180px;
+    position: absolute;
+    top: calc(100% + 9px);
+    right: 0%;
+    background-color: #eee;
+    display: none;
+}
+header nav::before {
+    content: "";
+    border: 9px solid;
+    border-color: transparent transparent #eee transparent;
+    position: absolute;
+    bottom: 100%;
+    left: calc(100% - 25px);
+}
+header nav
+ul {
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+}
+header
+.berger-logo:hover
+nav {
+    display: block;
+}
+header nav
+ul li {
+    width: 100%;
+    padding: 10px;
+    transition: 0.3s;
+}
+header nav
+ul li:hover{
+    padding-left: 20px;
+}
+header nav
+ul li a {
+    color: var(--black);
+    text-decoration: none;
+}
+header nav
+ul li:not(:last-child) {
+    border-bottom: 1px solid #ddd;
+}
+/* End Header */
+/* Start Landing */
+.section-1 {
+    width: 100%;
+    height: calc(100vh - 63px);
+    background-image: url(../image/main.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.section-1 .intro {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%)
+}
+
+.section-1 .intro h1 {
+    width: 100%;
+    text-align: center;
+    color: var(--main-color);
+    font-size: 50px;
+    margin: 0px;
+    margin-top: 15%;
+}
+
+.section-1 .intro p {
+    text-align: center;
+    margin: 0px;
+    width: 280px;
+    margin-bottom: 15%;
+    line-height: 1.8;
+    font-size: 18px;
+    font-weight: 500;
+}
+/* End Landing */
+/* Start Features */
+.section-2 {
+    padding: 60px 10px;
+    background-color: #eee;
+}
+
+.section-2 .box {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 20px;
+}
+
+.section-2 .box
+.feat {
+    text-align: center;
+    line-height: 1.8;
+}
+
+.section-2 .box
+.feat .logo {
+    color: var(--main-color);
+    font-size: 50px;
+}
+
+.section-2 .box
+.feat p {
+    color: #777;
+}
+/* End Features */
+/* Start Services */
+.section-3 {
+    width: 100%;
+}
+
+.section-3 .services {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 30px;
+    margin: 60px 10px;
+}
+
+.section-3 .services
+.col .srv {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.section-3 .services
+.col .srv .text .title {
+    margin: 0px 0px 10px;
+}
+
+.section-3 .services
+.col .srv .text .prg {
+    margin: 0px;
+}
+
+.section-3 .services
+.col .srv .logo i {
+    color: var(--main-color);
+    font-size: 30px;
+    flex-basis: 10px;
+}
+
+.section-3 .services
+.col .srv .logo {
+    flex-basis: 180px;
+}
+/* End Services */
