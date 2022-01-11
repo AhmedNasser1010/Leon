@@ -40,6 +40,34 @@ html {
         margin-top: -18px;
     }
 }
+
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Small */
+@media (min-width: 768px) {
+    .container {
+        width: 750px;
+    }
+}
+
+/* Medium */
+@media (min-width: 992px) {
+    .container {
+        width: 750px;
+    }
+}
+
+/* Large */
+@media (min-width: 1200px) {
+    .container {
+        width: 970px;
+    }
+}
 /* End Frame Work */
 /* start global rules */
 * {
@@ -208,6 +236,10 @@ ul li:not(:last-child) {
 }
 /* End Features */
 /* Start Services */
+.section-3.services > div {
+    padding-left: 0px;
+}
+
 .section-3 {
     width: 100%;
     padding: 60px 0px;
@@ -289,6 +321,7 @@ ul li:not(:last-child) {
     margin: 0px;
     color: var(--p-color);
     line-height: 1.8;
+    height: 140px;
 }
 
 .section-3 .services
@@ -300,7 +333,7 @@ ul li:not(:last-child) {
 
 .section-3 .services
 .col .srv .logo {
-    flex-basis: 140px;
+    padding-right: 20px;
 }
 
 .section-3 .box-title {
